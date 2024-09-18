@@ -5,7 +5,7 @@ function convertHash(password) {
     return hash.substring(0, 10);
 }
 
-async function checkEmailDetails(email) {
+export async function checkEmailDetails(email) {
     const apiEndpoint2 = `https://api.xposedornot.com/v1/breach-analytics?email=${encodeURIComponent(email)}`;
 
     try {
@@ -49,7 +49,7 @@ async function checkEmailDetails(email) {
 }
 
 // Function to return email breaches
-async function checkEmail(email) {
+export async function checkEmail(email) {
     const apiEndpoint1 = `https://api.xposedornot.com/v1/check-email/${email}`;
     const apiEndpoint4 = `https://api.xposedornot.com/v1/breaches`;
 

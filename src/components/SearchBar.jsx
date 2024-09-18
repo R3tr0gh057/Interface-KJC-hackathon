@@ -1,10 +1,5 @@
-import {checkEmail} from "../scripts/lib.js"
 
-export default function SearchBar() {
-    const handleSubmit = (event) => {
-        event.preventDefault();
-        console.log(checkEmail(event.target[0].value))
-    }
+export default function SearchBar({handleSubmit}) {
 
 	return (
 		<form onSubmit={handleSubmit} className="w-full flex gap-2 dm-sans">
