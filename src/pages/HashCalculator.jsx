@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { sha3_512 } from 'js-sha3';
+import { keccak_512 } from 'js-sha3';
 
 const HashPasswordChecker = () => {
   const [password, setPassword] = useState('');
@@ -8,7 +8,7 @@ const HashPasswordChecker = () => {
 
   // Function to compute first 10 characters of the SHA3-512 hash
   const keccakHash = (pwd) => {
-    const hash = sha3_512(pwd);
+    const hash = keccak_512(pwd);
     return hash.substring(0, 10); // First 10 characters
   };
 
