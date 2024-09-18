@@ -1,5 +1,5 @@
 import NavBar from "../components/NavBar";
-import SearchBar from "../components/PwdSearchBar";
+import SearchBar from "../components/DomSearchBar";
 import bgGradient from "../assets/bg-gradient.svg";
 import { Link } from 'react-router-dom';
 
