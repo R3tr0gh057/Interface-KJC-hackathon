@@ -1,24 +1,18 @@
+import NavBar from "../components/NavBar";
+import SearchBar from "../components/SearchBar";
+import bgGradient from "../assets/bg-gradient.svg"
+
 export default function Home() {
-	const checkBreach = () => {
-        const email = document.getElementById('email').value;
-        const responseBox = document.getElementById('response');
-
-        fetch(`https://api.xposedornot.com/v1/check-email/${email}`)
-        .then((res) => {
-            return res.json();
-        })
-        .then((data) => {
-            console.log(data.breaches)
-            responseBox.innerText = data.breaches
-        })
-    };
-
 	return (
 		<>
-			<input type="email" name="" id="email" />
-			<button onClick={checkBreach}>Check</button>
-
-			<div id="response"></div>
+			<NavBar />
+			<div className="w-screen h-screen flex flex-col items-start justify-center px-32 relative">
+				<h1 className="dm-sans text-6xl font-medium w-2/5 h-fit">
+					lorem ipsum loda <span className="text-[#697EFF]">kdhssbsdcjcn</span> dscsxsc.
+				</h1>
+				<SearchBar />
+                <img src={bgGradient} className="absolute" alt="" />
+			</div>
 		</>
 	);
 }
