@@ -1,6 +1,6 @@
-# **SecureME**
 
-![SecureME Logo](https://github.com/R3tr0gh057/Interface-KJC-hackathon/blob/main/src/assets/Frame%20427320747.png])
+
+![SecureME Logo](https://github.com/R3tr0gh057/Interface-KJC-hackathon/blob/main/src/assets/Frame%20427320747.png)
 
 ## **Overview**
 
