@@ -43,9 +43,9 @@ export default function Home() {
 							<>
 								<div key={index} className="breach-item">
 									<h3 className="font-bold text-3xl">{breach.breach}</h3>
-									<div className="flex items-center justify-center">
+									<div className="flex items-center justify-between gap-5">
 										<p className="font-bold text-[#616161]">{breach.details}</p>
-										<img src={breach.logo} className="w-2/5" alt={`${breach.breach} logo`} />
+										<img src={breach.logo} className="w-28" alt={`${breach.breach} logo`} />
 									</div>
 								</div>
 								<span className="w-full h-2 bg-[#B0B0B0]"></span>
@@ -55,5 +55,5 @@ export default function Home() {
 				)}
 			</div>
 		</>
-	);
+	); 
 }

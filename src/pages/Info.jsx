@@ -1,5 +1,9 @@
 import info from "../assets/info.png";
 
 export default function Info() {
-    return <img src={info} alt="" />
-}   
+	return (
+		<div>
+			<img src={info} alt="" />
+		</div>
+	);
+}
