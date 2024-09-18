@@ -1,17 +1,21 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './scripts/lib'
-
-import Home from './pages/Home'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import DomainSearch from './pages/DomainSearch';
+import PasswordSearch from './pages/PasswordSearch';
+import NavBar from './components/NavBar'; // Import NavBar
 
 function App() {
-
-  return (
-    <>
-      <Home/>
-    </>
-  )
+    return (
+        <Router>
+            <NavBar />
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/domain-search" element={<DomainSearch />} />
+                <Route path="/password" element={<PasswordSearch />} />
+                {/* You can add more routes here */}
+            </Routes>
+        </Router>
+    );
 }
 
-export default App
+export default App;

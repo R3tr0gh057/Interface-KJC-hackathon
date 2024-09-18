@@ -1,8 +1,7 @@
 import NavBar from "../components/NavBar";
 import SearchBar from "../components/SearchBar";
 import bgGradient from "../assets/bg-gradient.svg";
-import { checkEmailDetails } from "../scripts/lib.js";
-import { useState } from "react";
+import { Link } from 'react-router-dom';
 
 export default function Home() {
 	const [data, setData] = useState({ breaches: [] }); // Initialize with default empty breaches array
