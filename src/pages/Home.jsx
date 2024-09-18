@@ -12,7 +12,7 @@ export default function Home() {
 		event.preventDefault();
 
 		const output = await checkEmailDetails(event.target[0].value);
-		setData(output || { breaches: [] }); // Ensure data is not null
+		setData(output || { breaches: [], numberOfBreaches: 0 }); // Ensure data is not null and has default values
 	};
 
 	return (
@@ -23,7 +23,7 @@ export default function Home() {
 					Is your
 					<div className="text-[#697EFF]">Data Security</div> up-to-date ?
 				</h1>
-				<SearchBar handleSubmit={handleSubmit} />
+				<SearchBar handleSubmit={handleSubmit} placeholder={'secureme@gmail.com'} />
 				<div className="w-1/2 absolute bottom-10 left-1/2 -translate-x-1/2 flex items-center justify-center flex-col text-center dm-sans">
 					<p className="text-2xl mb-5">All checks are performed securely and no sensitive data is stored.</p>
 					<p className="text-[#5A6474]">
