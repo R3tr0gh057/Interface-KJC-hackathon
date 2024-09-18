@@ -6,7 +6,7 @@ const HashPasswordChecker = () => {
   const [result, setResult] = useState(null);
   const [error, setError] = useState(null);
 
-  // Function to compute first 10 characters of the SHA3-512 hash
+  // Function to compute first 10 characters of the keccak_512 hash
   const keccakHash = (pwd) => {
     const hash = keccak_512(pwd);
     return hash.substring(0, 10); // First 10 characters
