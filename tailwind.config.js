@@ -5,7 +5,11 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        hero_gradient: 'url(./src/assets/bg-gradient.svg)'
+      }
+    },
   },
   plugins: [],
 }
