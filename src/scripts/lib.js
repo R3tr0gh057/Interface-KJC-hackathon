@@ -6,11 +6,11 @@ function convertHash(password) {
 }
 
 async function checkEmailDetails(email) {
-    const apiEndpoint = `https://api.xposedornot.com/v1/breach-analytics?email=${encodeURIComponent(email)}`;
+    const apiEndpoint2 = `https://api.xposedornot.com/v1/breach-analytics?email=${encodeURIComponent(email)}`;
 
     try {
         // Fetch data from the API endpoint
-        const response = await fetch(apiEndpoint, {
+        const response = await fetch(apiEndpoint2, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -131,17 +131,6 @@ async function checkDomain(domain) {
         // Extract Detailed_Breach_Info from the response
         const detailedBreachInfo = data.metrics?.Detailed_Breach_Info || {};
         return detailedBreachInfo;
-        // // Filter the detailed breach info by the specified domain
-        // const result = {};
-        // for (const breachKey in detailedBreachInfo) {
-        //     const breachInfo = detailedBreachInfo[breachKey];
-        //     if (breachInfo.domain === domain) {
-        //         result[breachKey] = breachInfo;
-        //     }
-        // }
-
-        // // Return the filtered result
-        // return result;
 
     } catch (error) {
         console.error("Error:", error);
